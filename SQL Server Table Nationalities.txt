@@ -1,0 +1,276 @@
+﻿GO
+
+/****** Object:  Table [dbo].[Nationality]    Script Date: 2/25/2014 7:10:04 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Nationality](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](512) NULL,
+	[IsActive] [bit] NOT NULL,
+	[CreatedOn] [datetime2](7) NULL,
+	[CreatedBy] [bigint] NULL,
+	[UpdatedOn] [datetime2](7) NULL,
+	[UpdatedBy] [bigint] NULL,
+ CONSTRAINT [PK_Nationality] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Nationality] ADD  CONSTRAINT [DF_Nationality_IsActive]  DEFAULT ((1)) FOR [IsActive]
+GO
+
+
+
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (1, N'أثيوبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (2, N'أرجنتيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (3, N'أردني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (4, N'أرميني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (5, N'أروجوايي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (6, N'أسباني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (7, N'أسترالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (8, N'أستوني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (9, N'أفريقيا الوسطى', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (10, N'أفغانستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (11, N'إكوادوري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (12, N'ألباني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (13, N'ألماني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (14, N'إماراتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (15, N'أمريكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (16, N'أندونيسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (17, N'أنقولي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (18, N'أوزبكستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (19, N'أوغندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (20, N'أوكراني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (21, N'إيراني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (22, N'إيرلندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (23, N'اتحاد ماينمار', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (24, N'اذربيجاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (25, N'اريتيري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (26, N'الصين الشعبية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (27, N'الصين الوطنية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (28, N'المجر', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (29, N'انتاركتيكا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (30, N'انجويلا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (31, N'اندورا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (32, N'ايسلندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (33, N'ايطالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (34, N'باربودا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (35, N'باريادوسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (36, N'باكستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (37, N'بحريني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (38, N'برازيلي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (39, N'براغويي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (40, N'برتغالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (41, N'برناوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (42, N'برونايي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (43, N'بريطاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (44, N'بلجيكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (45, N'بلغاري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (46, N'بليزي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (47, N'بنجلادشي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (48, N'بنمي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (49, N'بنيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (50, N'بهوتاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (51, N'بوتسواني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (52, N'بوثاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (53, N'بورتوريكوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (54, N'بوركينا فاسو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (55, N'بوركينافاسو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (56, N'بورندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (57, N'بوسني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (58, N'بوفثاتسواني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (59, N'بولندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (60, N'بوليفي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (61, N'بولينيسيا الفرنسية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (62, N'بيرمودا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (63, N'بيروي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (64, N'بيلو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (65, N'تايلاندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (66, N'تايوان', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (67, N'تركستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (68, N'تركمانستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (69, N'تركى', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (70, N'ترينيداد وتوباجوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (71, N'تشادي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (72, N'تشيكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (73, N'تشيلي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (74, N'تنزاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (75, N'توجوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (76, N'توفالو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (77, N'توكيلاو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (78, N'تونجي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (79, N'تونسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (80, N'تيمور الشرقية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (81, N'جابوني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (82, N'جامايكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (83, N'جامبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (84, N'جبل طارق', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (85, N'جريناداي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (86, N'جرينلاند', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (87, N'جزائري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (88, N'جزر البهما', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (89, N'جزر الترك و القوقاز', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (90, N'جزر الرأس الأخضر', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (91, N'جزر السولومون', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (92, N'جزر القمر', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (93, N'جزر الكناري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (94, N'جزر الملاديف', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (95, N'جزر سيشل', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (96, N'جزر فاكلاند', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (97, N'جزر فيجي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (98, N'جزر فيرجن الامريكية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (99, N'جزر فيرجن البريطانية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (100, N'جزر فيرو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (101, N'جزر كايمون', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (102, N'جزر كوك', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (103, N'جزر ماريانا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (104, N'جزر ماريشال', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (105, N'جزر نورفولك', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (106, N'جزر والس وفوتونا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (107, N'جزيرة كريسماس', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (108, N'جزيرة مايوت', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (109, N'جمهورية دمينكان', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (110, N'جنوب أفريقي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (111, N'جواتيمالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (112, N'جوام', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (113, N'جوانا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (114, N'جورجي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (115, N'جياني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (116, N'جيبوتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (117, N'جيودي لوب', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (118, N'دانماركي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (119, N'دومونيكاتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (120, N'رواندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (121, N'روسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (122, N'روسيا البيضاء', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (123, N'روماني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (124, N'رينيون', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (125, N'زائيري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (126, N'زامبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (127, N'زمبابوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (128, N'س بييري و ميكويلن', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (129, N'ساحل العاج', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (130, N'ساموا الامريكية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (131, N'سان فينسنت', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (132, N'سان مورينو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (133, N'سانت لوسيا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (134, N'سانت هيلانة', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (135, N'ساوتومي وبرنسيبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (136, N'سلفادوري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (137, N'سلوفاكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (138, N'سلوفيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (139, N'سنغافوري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (140, N'سنغالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (141, N'سوداني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (142, N'سوري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (143, N'سورينامي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (144, N'سوزاي لاند', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (145, N'سويدي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (146, N'سويسري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (147, N'سيراليوني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (148, N'سيريلانكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (149, N'سيشلي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (150, N'صربيا و الجبل الأسود', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (151, N'صومالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (152, N'طاجاكستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (153, N'عراقي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (154, N'عروبا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (155, N'عماني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (156, N'غاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (157, N'غرب ساموا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (158, N'غير متوفر', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (159, N'غيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (160, N'غينيا الإستوائية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (161, N'غينيا الجديدة', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (162, N'غينيا بيساو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (163, N'فاتيكاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (164, N'فانيوتو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (165, N'فرنسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (166, N'فلبيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (167, N'فلسطيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (168, N'فلسطيني بوثيقة اردنية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (169, N'فلسطيني بوثيقة سوربة', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (170, N'فلسطيني بوثيقة عراقية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (171, N'فلسطيني بوثيقة لبناني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (172, N'فلسطيني بوثيقة مصرية', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (173, N'فنزويلي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (174, N'فنلندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (175, N'فياتنامي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (176, N'قازاخستاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (177, N'قبرصي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (178, N'قرعيزي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (179, N'قطرى', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (180, N'كازاخستان', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (181, N'كاليدونيا الجديد', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (182, N'كاميروني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (183, N'كرواتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (184, N'كمبودي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (185, N'كندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (186, N'كوبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (187, N'كوري جنوبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (188, N'كوري شمالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (189, N'كوستاريكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (190, N'كوسوفوا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (191, N'كولومبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (192, N'كونغوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (193, N'كويتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (194, N'كيريباتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (195, N'كيني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (196, N'لاتفي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (197, N'لاوسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (198, N'لبناني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (199, N'لكسمبورجي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (200, N'لوسوتوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (201, N'ليبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (202, N'ليبيري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (203, N'ليتواني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (204, N'ليختنشتين', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (205, N'مارتينيكو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (206, N'ماكاوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (207, N'مالاوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (208, N'مالطي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (209, N'مالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (210, N'ماليزي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (211, N'مدغشقري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (212, N'مصرى', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (213, N'مغربي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (214, N'مقدوني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (215, N'مقيم', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (216, N'مقيم بلوشي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (217, N'مكسيكي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (218, N'منغولي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (219, N'موريتاني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (220, N'موريشيوسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (221, N'موزمبيقي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (222, N'مولدافي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (223, N'موناكو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (224, N'مونت سيرات', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (225, N'ميكرونيسيا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (226, N'ناميبي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (227, N'نرويجي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (228, N'نمساوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (229, N'نورو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (230, N'نيبالي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (231, N'نيجري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (232, N'نيجيري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (233, N'نيكاراجوي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (234, N'نيو', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (235, N'نيوزلندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (236, N'هايتي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (237, N'هندوراسي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (238, N'هندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (239, N'هنغاري', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (240, N'هولندي', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (241, N'هونج كونج', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (242, N'ياباني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (243, N'يمني', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (244, N'يوغسلافيا', GetDate(), 1); 
+Insert Into Nationality (Id, Name, CreatedOn, CreatedBy) Values (245, N'يوناني', GetDate(), 1); 
